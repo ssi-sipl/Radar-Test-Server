@@ -5,6 +5,8 @@ import json
 MQTT_BROKER = "localhost"
 MQTT_PORT = 1883
 MQTT_TOPIC = "radar_surveillance"
+MQTT_USERNAME = "your_username"  # Add your MQTT username here
+MQTT_PASSWORD = "your_password"  # Add your MQTT password here
 
 def on_connect(client, userdata, flags, rc):
     print(f"Connected to MQTT Broker with result code: {rc}")
@@ -25,6 +27,9 @@ def on_message(client, userdata, msg):
 
 # Initialize MQTT client
 client = mqtt.Client()
+
+# Set MQTT authentication credentials
+client.username_pw_set(MQTT_USERNAME, MQTT_PASSWORD)
 
 # Assign callback functions
 client.on_connect = on_connect

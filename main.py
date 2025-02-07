@@ -7,9 +7,14 @@ from datetime import datetime
 MQTT_BROKER = "localhost"  # Change this to your MQTT broker address
 MQTT_PORT = 1883
 MQTT_TOPIC = "radar_surveillance"
+MQTT_USERNAME = "your_username"  # Add your MQTT username here
+MQTT_PASSWORD = "your_password"  # Add your MQTT password here
 
 # Initialize MQTT client
 client = mqtt.Client()
+
+# Set MQTT authentication credentials
+client.username_pw_set(MQTT_USERNAME, MQTT_PASSWORD)
 
 try:
     # Connect to MQTT broker
