@@ -1,12 +1,6 @@
 import paho.mqtt.client as mqtt
 import json
-
-# MQTT Configuration
-MQTT_BROKER = "localhost"
-MQTT_PORT = 1883
-MQTT_TOPIC = "radar_surveillance"
-MQTT_USERNAME = "your_username"  # Add your MQTT username here
-MQTT_PASSWORD = "your_password"  # Add your MQTT password here
+from config import *
 
 def on_connect(client, userdata, flags, rc):
     print(f"Connected to MQTT Broker with result code: {rc}")

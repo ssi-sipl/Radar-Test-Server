@@ -2,13 +2,7 @@ import json
 import paho.mqtt.client as mqtt
 import time
 from datetime import datetime
-
-# MQTT Configuration
-MQTT_BROKER = "localhost"  # Change this to your MQTT broker address
-MQTT_PORT = 1883
-MQTT_TOPIC = "radar_surveillance"
-MQTT_USERNAME = "your_username"  # Add your MQTT username here
-MQTT_PASSWORD = "your_password"  # Add your MQTT password here
+from config import *
 
 # Initialize MQTT client
 client = mqtt.Client()
