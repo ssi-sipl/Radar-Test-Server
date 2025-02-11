@@ -16,7 +16,7 @@ sudo apt install mosquitto
 nano config.py
 ```
 
-### 3. Run the script to publish detections
+### 3. Run the main script to publish detections
 
 ```bash
 python main.py
